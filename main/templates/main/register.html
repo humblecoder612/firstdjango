@@ -1,0 +1,13 @@
+{% extends "main/home.html" %}
+{% block content %}
+  <form method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button class="btn" style="backgorund-color:red;color: yellow"  type="submit"> register </button>
+  </form>
+
+  If you have a account already, <a href="/login">login</a> instead
+
+
+
+{% endblock content %}

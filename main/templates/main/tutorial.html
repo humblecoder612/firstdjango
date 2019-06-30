@@ -1,0 +1,15 @@
+{% extends 'main/head.html' %}
+
+{% block content %}
+
+    <div class="row">
+        <div class="col s12, m8, l8">
+            {% for t in tutorial %}
+            <h3>{{t.tut_title}}</h3>
+            <p style="font-size:70%">Published {{t.tut_publish}}</p>
+            {{tutorial.tutorial_content|safe}}
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}

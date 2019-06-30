@@ -1,0 +1,14 @@
+{% extends "main/home.html" %}
+{% block content %}
+  {% load static %}
+  <link href="{% static 'css/login.css' %}" rel="stylesheet">
+  <form class="box" method="POST">
+    {% csrf_token %}
+    <h1>Login</h1>
+    {{form.as_p}}
+    <input type="submit" name="" placeholder="Login">
+  </form>
+  If you dont have a account, <a href="/register">register</a> 
+
+
+{% endblock content %}
